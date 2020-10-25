@@ -17,6 +17,48 @@
 2.在测试主类中，实例化多个类实体，模拟学生选课操作、打印课程信息（信息包括：编号、课程名称、上课地点、时间、授课教师）；模拟学生退课操作，再打印课程信息。  
 3.编写实验报告。  
 ## 实验过程 
-
-
-
+先写出teacher的变量  
+```
+public class Teacher {
+	private int teacherid;
+	private String teacherName;
+	private Course[] courses;
+```  
+构造函数Teacher  
+```
+public Teacher(){
+		super();
+		courses = new Course[1];
+	}
+```  
+对Teacher函数的运用  
+```
+public Teacher(int teacherid,String teacherName){
+		this.teacherid = teacherid;
+		this.teacherName = teacherName;
+		courses = new Course[1];
+	}
+	
+	public int getTeacherid(){
+		return teacherid;
+	}
+	public void setTeacherid(int teacherid){
+		this.teacherid = teacherid;
+	}
+	public String getTeacherName(){
+		return teacherName;
+	}
+	public void setTeacherName(String teacherName){
+		this.teacherName =teacherName;
+	}
+```  
+接下来是对course的变量定义  
+```
+public class Course{
+	private int courseId;
+	private String courseName;
+	private Teacher teacher;
+	private float credit;
+	private Student[] students;
+```
+	
